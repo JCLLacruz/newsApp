@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import ListNews from './components/ListNews/ListNews';
 import Newnew from './components/Newnew/Newnew';
+import Footer from './components/Footer/Footer';
 
 function App() {
 	return (
@@ -13,10 +14,11 @@ function App() {
 				<GlobalProvider>
 					<Header />
 					<Routes>
-            <Route path='/' element={<Home />}/>
-            <Route path='/ListNews' element={<ListNews />}/>
-            <Route path='/newnew' element={<Newnew />}/>
-          </Routes>
+						<Route path='/' element={<Home />} />
+						<Route path='/ListNews' element={<ListNews />} />
+						<Route path='/newnew' element={<Newnew />} />
+					</Routes>
+					<Footer />
 				</GlobalProvider>
 			</BrowserRouter>
 		</>

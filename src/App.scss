@@ -1,0 +1,9 @@
+@import 'stylesVariable'
+
+#root {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: linear-gradient(135deg, $gradient-start, #aaf);
+}
