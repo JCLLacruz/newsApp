@@ -1,4 +1,5 @@
 import './App.scss';
+import './custom.scss'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { GlobalProvider } from './context/GlobalState';
 import Header from './components/Header/Header';

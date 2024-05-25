@@ -19,13 +19,11 @@ const Newnew = () => {
 	const handleOnSubmit = (e) => {
 		e.preventDefault();
 		if (localStorage.newNews == undefined) {
-			localStorage.setItem('newNews', JSON.stringify(dataForm));
+			const firstNew = [dataForm];
+			localStorage.setItem('newNews', JSON.stringify(firstNew));
 		} else {
-			const firstNew = JSON.parse(localStorage.getItem('newNews')) || [];
-			let news = [];
-			news.push(firstNew);
+			let news = JSON.parse(localStorage.getItem('newNews'));
 			news.push(dataForm);
-			console.log('newnews', news);
 			localStorage.removeItem('newNews');
 			localStorage.setItem('newNews', JSON.stringify(news));
 		}
@@ -33,21 +31,21 @@ const Newnew = () => {
 	};
 
 	return (
-		<div id='formContainer' className='container'>
+		<div id='formContainer'>
 			<form onSubmit={handleOnSubmit}>
-				<div className='mb-3'>
-					<label htmlFor='newTitle' className='form-label'>
+				<div className='mt-3 form-group'>
+					<label htmlFor='newTitle' className='ms-3 form-label'>
 						Title New
 					</label>
 					<input type='text' className='form-control' id='newTitle' name='title' placeholder='New Title' onChange={handleInputChange} />
 				</div>
-				<div className='mb-3'>
-					<label htmlFor='article' className='form-label'>
+				<div className=' mt-1 form-group'>
+					<label htmlFor='article' className='ms-3 form-label'>
 						Article
 					</label>
 					<textarea className='form-control' name='article' id='article' rows='3' onChange={handleInputChange}></textarea>
 				</div>
-				<input type='submit' value={'Submit'} className='btn btn-primary' />
+				<input type='submit' value={'Submit'} className='btn btn-primary m-3' />
 			</form>
 		</div>
 		);

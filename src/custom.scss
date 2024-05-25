@@ -1,10 +1,51 @@
-@import '../node_modules/bootstrap/scss/bootstrap.scss'
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
 
-$background-color: white;
-$border-radius: 15px;
-$padding: 20px;
-$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-$backdrop-blur: 10px;
-$backdrop-saturate: 180%;
-$gradient-start: #f06;
-$gradient-end: #aaf;
+$primary: #E8B672; // Color primario
+$secondary: #A4B7AB; // Color secundario
+$success: #28a745; // Color de éxito
+$info: #17a2b8; // Color de información
+$warning: #ffc107; // Color de advertencia
+$danger: #dc3545; // Color de peligro
+$light: #f8f9fa; // Color claro
+$dark: #343a40; // Color oscuro
+$box-shadow-xxl: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+.basic-card {
+  background-color: $light;
+  border-radius: $border-radius-lg;
+  box-shadow: $box-shadow-lg;
+  margin: 20px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: $body-color;
+
+  &-dark {
+    background-color: $dark;
+    color: $white;
+
+    .card-title {
+      color: $primary;
+    }
+  }
+
+  .card-content {
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $box-shadow-xxl; // Utiliza la sombra extra grande de Bootstrap
+  }
+}
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss'
