@@ -1,7 +1,8 @@
-@import '../node_modules/bootstrap/scss/functions';
-@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/_functions';
+@import '../node_modules/bootstrap/scss/_variables';
 
-$primary: #E8B672; // Color primario
+$primary: #8CA58F; // Color primario
+$btn-link-disabled-color: #A4B7AB; // Color primario
 $secondary: #A4B7AB; // Color secundario
 $success: #28a745; // Color de éxito
 $info: #17a2b8; // Color de información
@@ -10,8 +11,9 @@ $danger: #dc3545; // Color de peligro
 $light: #f8f9fa; // Color claro
 $dark: #343a40; // Color oscuro
 $box-shadow-xxl: 0 8px 16px rgba(0, 0, 0, 0.2);
-$body-bg: #000;
-$body-color: #111;
+$body-bg: #061826;
+$body-color: #918F8D;
+
 
 .basic-card {
   background-color: $light;
