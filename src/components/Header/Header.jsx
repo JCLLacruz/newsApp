@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
 	return (
 		<>
-			<nav className='navbar navbar-expand-lg bg-body-tertiary'>
+			<nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
 				<div className='container-fluid'>
 					<Link to='/' className="navbar-brand">
 						New news and not to old
@@ -34,7 +34,7 @@ const Header = () => {
 							</li>
 							<li className='nav-item'>
 								<Link to='/newnew' className='nav-link' href='#'>
-									New New
+									New Article
 								</Link>
 							</li>
 						</ul>

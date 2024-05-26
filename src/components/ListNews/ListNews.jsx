@@ -5,7 +5,6 @@ import './ListNews.scss'
 const News = () => {
 
   const {news, getNews} = useContext(GlobalContext);
-console.log(news);
   useEffect(()=>{
     getNews()
   },[])
